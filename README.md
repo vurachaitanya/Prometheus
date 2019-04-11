@@ -5,4 +5,10 @@ Prometheus setup and configuration
 - Sample Kubernetes yml configuration : https://raw.githubusercontent.com/prometheus/prometheus/master/documentation/examples/prometheus-kubernetes.yml
 - Start the service with ./prometheus --config.file="prometheus.yml" so as to start the service at localhost:9090 and localhost:9090/metrics has the metrics of the service started.
 - Node exporter link : https://prometheus.io/download/#node_exporter
-- 
+
+# Prometheus Docker version:
+```
+docker run -d -p 9090:9090 prom/prometheus 
+docker run -d -p 9100:9100 prom/node-exporter
+
+```
