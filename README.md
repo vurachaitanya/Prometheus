@@ -11,4 +11,8 @@ Prometheus setup and configuration
 docker run -d -p 9090:9090 prom/prometheus 
 docker run -d -p 9100:9100 prom/node-exporter
 
+docker run -p 9090:9090 -v /prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+
+docker run -d -p 9090:9090 prom/prometheus --config.file=/prometheus/prometheus.yml
+
 ```
